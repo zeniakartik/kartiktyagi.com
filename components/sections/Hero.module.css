@@ -1,0 +1,228 @@
+.hero {
+  padding-top: clamp(1rem, 4vw, 2.5rem);
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+  scroll-margin-top: 5rem;
+}
+
+/* ── Avatar + availability ─────────────────────────────────────────────── */
+.avatarWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.avatarRing {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--nu-md);
+}
+
+.avatar {
+  border-radius: var(--r-pill);
+  object-fit: cover;
+  background: var(--surface-sunken);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--nu-inset-sm);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  opacity: 0.5;
+  animation: pulse 2.4s var(--ease) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ── Eyebrow (rotating role) ───────────────────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+  min-height: 1.4em;
+}
+
+/* ── Title ─────────────────────────────────────────────────────────────── */
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.name {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+.statement {
+  font-size: clamp(2.05rem, 1.3rem + 3.1vw, 3.55rem);
+  font-weight: 680;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--text-strong);
+  max-width: 20ch;
+}
+
+/* ── Intro ─────────────────────────────────────────────────────────────── */
+.intro {
+  color: var(--muted);
+  font-size: var(--fs-lg);
+  line-height: 1.65;
+  max-width: 38rem;
+  margin-bottom: 2.25rem;
+}
+
+/* ── CTAs ──────────────────────────────────────────────────────────────── */
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.primary,
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--r-pill);
+  font-weight: 550;
+  font-size: 0.95rem;
+  transition: transform var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+}
+
+.primary {
+  color: var(--on-accent);
+  background: var(--accent);
+  box-shadow: var(--nu-sm);
+}
+
+.primary:hover {
+  background: var(--accent-strong);
+  transform: translateY(-2px);
+}
+
+.primary:active {
+  transform: translateY(0);
+  box-shadow: var(--nu-inset-sm);
+}
+
+.primary svg {
+  transition: transform var(--dur-2) var(--ease);
+}
+
+.primary:hover svg {
+  transform: translateX(3px);
+}
+
+.ghost {
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: var(--nu-sm);
+}
+
+.ghost:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.ghost:active {
+  transform: translateY(0);
+  box-shadow: var(--nu-inset-sm);
+}
+
+/* ── Stats ─────────────────────────────────────────────────────────────── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--nu-inset-sm);
+}
+
+.statValue {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 680;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.statDetail {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--faint);
+  line-height: 1.4;
+}
+
+@media (min-width: 560px) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

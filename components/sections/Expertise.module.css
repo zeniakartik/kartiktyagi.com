@@ -1,0 +1,121 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.domain {
+  padding: 1.5rem;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--nu-sm);
+  transition: transform var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+}
+
+.domain:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--nu-md);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--nu-inset-sm);
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+
+.domainTitle {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.55rem;
+}
+
+.domainSummary {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--r-xs);
+  background: var(--surface-sunken);
+  box-shadow: var(--nu-inset-sm);
+}
+
+/* ── Skills toolbox ────────────────────────────────────────────────────── */
+.skills {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.subhead {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 1.5rem;
+}
+
+.skillGroups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.groupHead {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+@media (min-width: 620px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1180px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .group {
+    grid-template-columns: 12rem 1fr;
+    align-items: start;
+  }
+  .groupHead {
+    padding-top: 0.35rem;
+  }
+}

@@ -1,0 +1,45 @@
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* Base ambient wash */
+  background:
+    radial-gradient(
+      60rem 60rem at 85% -10%,
+      var(--accent-tint),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 50rem at -10% 110%,
+      var(--accent-tint),
+      transparent 55%
+    );
+  opacity: 0.6;
+}
+
+/* Pointer-tracked spotlight (only when activated by JS on fine pointers). */
+.bg[data-active="true"] {
+  background:
+    radial-gradient(
+      26rem 26rem at var(--mx, 50%) var(--my, 0%),
+      var(--accent-glow),
+      transparent 60%
+    ),
+    radial-gradient(
+      60rem 60rem at 85% -10%,
+      var(--accent-tint),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 50rem at -10% 110%,
+      var(--accent-tint),
+      transparent 55%
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg {
+    background: none;
+  }
+}

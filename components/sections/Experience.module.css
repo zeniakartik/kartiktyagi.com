@@ -1,0 +1,179 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding-block: clamp(1.75rem, 3vw, 2.25rem);
+  border-top: 1px solid var(--line);
+}
+
+.item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ── Period column ─────────────────────────────────────────────────────── */
+.period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+  padding-top: 0.15rem;
+}
+
+.marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--nu-inset-sm);
+  flex-shrink: 0;
+}
+
+.item:hover .marker {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+/* ── Content ───────────────────────────────────────────────────────────── */
+.head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.85rem;
+  margin-bottom: 0.7rem;
+}
+
+.company {
+  font-size: var(--fs-xl);
+  font-weight: 620;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.companyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--dur-2) var(--ease);
+}
+
+.companyLink:hover {
+  color: var(--accent);
+}
+
+.type,
+.location {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: var(--r-pill);
+}
+
+.type {
+  color: var(--accent);
+  background: var(--accent-tint);
+}
+
+.location {
+  color: var(--faint);
+  background: var(--surface-sunken);
+  box-shadow: var(--nu-inset-sm);
+}
+
+.positions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.position {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+}
+
+.posTitle {
+  font-weight: 550;
+  color: var(--text);
+}
+
+.posPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--faint);
+}
+
+.summary {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 46rem;
+  margin-bottom: 1rem;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 46rem;
+  margin-bottom: 1.15rem;
+}
+
+.highlight {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.6rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  color: var(--text);
+  font-weight: 550;
+  transition: color var(--dur-2) var(--ease), gap var(--dur-2) var(--ease);
+}
+
+.resumeLink:hover {
+  color: var(--accent);
+  gap: 0.8rem;
+}
+
+/* ── Desktop: period as a left column ──────────────────────────────────── */
+@media (min-width: 680px) {
+  .item {
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.75rem;
+  }
+}

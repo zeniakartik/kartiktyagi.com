@@ -1,0 +1,39 @@
+.toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--nu-sm);
+  color: var(--muted);
+  transition: box-shadow var(--dur-2) var(--ease), color var(--dur-2) var(--ease),
+    transform var(--dur-2) var(--ease);
+}
+
+.toggle:hover {
+  color: var(--accent);
+}
+
+.toggle:active {
+  box-shadow: var(--nu-inset-sm);
+  transform: translateY(1px);
+}
+
+.sun,
+.moon {
+  display: grid;
+  place-items: center;
+  grid-area: 1 / 1;
+}
+
+/* Show the icon representing the theme you'll switch TO. */
+.sun {
+  display: none;
+}
+:global([data-theme="dark"]) .sun {
+  display: grid;
+}
+:global([data-theme="dark"]) .moon {
+  display: none;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "kartiktyagi.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio of Kartik Tyagi — Technical Lead, Solution Architect & Builder.",
+  "author": "Kartik Tyagi <kartik9756@gmail.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "typescript": "^5"
+  }
+}
