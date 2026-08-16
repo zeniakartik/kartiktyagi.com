@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "Personal portfolio of Kartik Tyagi — Technical Lead, Solution Architect & Builder.",
-  "author": "Kartik Tyagi <kartik9756@gmail.com>",
+  "author": "Kartik Tyagi <hi@kartiktyagi.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "STATIC_EXPORT=1 next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"

@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
+    creator: "@zenialkartik",
   },
   robots: {
     index: true,

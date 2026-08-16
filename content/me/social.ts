@@ -3,16 +3,23 @@ import type { SocialLink } from "./types";
 export const socials: SocialLink[] = [
   {
     label: "GitHub",
-    handle: "genialkartik",
-    href: "https://github.com/genialkartik",
+    handle: "zeniakartik",
+    href: "https://github.com/zeniakartik",
     icon: "github",
     primary: true,
   },
   {
     label: "LinkedIn",
-    handle: "genial-kartik",
-    href: "https://linkedin.com/in/genial-kartik",
+    handle: "zeniakartik",
+    href: "https://www.linkedin.com/in/zeniakartik/",
     icon: "linkedin",
+    primary: true,
+  },
+  {
+    label: "X",
+    handle: "zenialkartik",
+    href: "https://x.com/zenialkartik",
+    icon: "x",
     primary: true,
   },
   {
@@ -30,8 +37,8 @@ export const socials: SocialLink[] = [
   },
   {
     label: "Email",
-    handle: "kartik9756@gmail.com",
-    href: "mailto:kartik9756@gmail.com",
+    handle: "hi@kartiktyagi.com",
+    href: "mailto:hi@kartiktyagi.com",
     icon: "mail",
     primary: true,
   },

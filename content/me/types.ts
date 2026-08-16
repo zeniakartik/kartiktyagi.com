@@ -30,6 +30,7 @@ export type IconName =
   | "linkedin"
   | "stackoverflow"
   | "instagram"
+  | "x"
   | "mail"
   | "phone"
   | "arrow-up-right"
