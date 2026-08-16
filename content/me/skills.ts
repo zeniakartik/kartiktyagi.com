@@ -21,7 +21,7 @@ export const skills: SkillGroup[] = [
     label: "Cloud & DevOps",
     icon: "cloud",
     items: [
-      "AWS (EC2, S3, IAM, Cognito, CloudFront, EKS, R2)",
+      "AWS (EC2 · S3 · EKS · R2)",
       "DigitalOcean",
       "Terraform",
       "Docker",

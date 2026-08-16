@@ -61,6 +61,8 @@ export interface Profile {
   headline: string;
   location: string;
   availability?: string;
+  /** Short line shown in the persistent rail (distinct from the hero headline). */
+  railTagline: string;
   photo: { src: string; alt: string };
   resume: { href: string; label: string };
   /** Short one/two-line intro used near the hero. */

@@ -71,7 +71,7 @@ export function Rail() {
 
       <div className={styles.panel} id="rail-panel">
         <div className={styles.lede}>
-          <p className={styles.tagline}>{profile.headline}</p>
+          <p className={styles.tagline}>{profile.railTagline}</p>
           <p className={styles.location}>
             <Icon name="map-pin" size={15} />
             {profile.location}

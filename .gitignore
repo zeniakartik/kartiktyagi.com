@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reference material from the previous site (kept locally, not part of this project)
+/kartiktyagi.in/
+# source resume / profile exports at the repo root (the site's resume lives in /public)
+/*.pdf

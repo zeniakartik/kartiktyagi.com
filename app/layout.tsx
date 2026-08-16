@@ -64,7 +64,7 @@ export const viewport: Viewport = {
   colorScheme: "light dark",
 };
 
-const themeScript = `(function(){try{var k="kt-theme";var s=localStorage.getItem(k);var m=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme", s||(m?"dark":"light"));}catch(e){document.documentElement.setAttribute("data-theme","light");}})();`;
+const themeScript = `(function(){var d=document.documentElement;d.classList.add("js");try{var k="kt-theme";var p=new URLSearchParams(location.search).get("theme");var s=localStorage.getItem(k);var m=window.matchMedia("(prefers-color-scheme: dark)").matches;var t=(p==="light"||p==="dark")?p:(s||(m?"dark":"light"));d.setAttribute("data-theme",t);}catch(e){d.setAttribute("data-theme","light");}})();`;
 
 const personLd = {
   "@context": "https://schema.org",

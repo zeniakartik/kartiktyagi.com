@@ -13,6 +13,7 @@ export const profile: Profile = {
   headline: "I design systems, and lead the teams that build them.",
   location: "Pune, India",
   availability: "Open to architecture & technical leadership conversations",
+  railTagline: "Systems thinking, from whiteboard to production.",
   photo: {
     src: "/me/kartik.png",
     alt: "Portrait of Kartik Tyagi",
