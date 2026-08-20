@@ -2,17 +2,17 @@ import type { Stat } from "./types";
 
 export const stats: Stat[] = [
   {
-    value: "5+",
+    value: "6+",
     label: "Years",
     detail: "Engineering, architecture & technical leadership",
   },
   {
-    value: "25+",
+    value: "250+",
     label: "Legacy systems",
     detail: "COBOL Pathway systems reverse-engineered for modernization",
   },
   {
-    value: "12+",
+    value: "20+",
     label: "Products shipped",
     detail: "Across product, enterprise, security & open source",
   },

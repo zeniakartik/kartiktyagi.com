@@ -41,11 +41,13 @@
 }
 
 .dot {
+  --dot: #22c55e;
   position: relative;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--dot);
+  box-shadow: 0 0 8px color-mix(in oklab, var(--dot) 60%, transparent);
 }
 
 .dot::after {
@@ -53,8 +55,8 @@
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1px solid var(--accent);
-  opacity: 0.5;
+  border: 1px solid var(--dot);
+  opacity: 0.55;
   animation: pulse 2.4s var(--ease) infinite;
 }
 

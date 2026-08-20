@@ -9,8 +9,7 @@ export function Beyond() {
       id="beyond"
       index="06"
       kicker="Beyond the code"
-      title="Life happens away from the keyboard, too."
-      lead="I think in systems, but I recharge in the open air. A few things that keep me curious and balanced."
+      title="Life happens away from the keyboard."
     >
       <div className={styles.interests}>
         {interests.map((it, i) => (

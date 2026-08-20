@@ -295,6 +295,12 @@ ul {
   white-space: nowrap;
 }
 
+/* Uniform accent-colored icon inside a pill or chip */
+.pill-icon {
+  color: var(--accent);
+  flex: none;
+}
+
 /* Visually hidden but accessible */
 .sr-only {
   position: absolute;

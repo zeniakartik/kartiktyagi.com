@@ -77,7 +77,7 @@
 
 .skillGroups {
   display: grid;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .group {
@@ -98,7 +98,8 @@
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 1.5rem;
+  font-weight: bold;
 }
 
 @media (min-width: 620px) {
@@ -110,12 +111,5 @@
 @media (min-width: 1180px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .group {
-    grid-template-columns: 12rem 1fr;
-    align-items: start;
-  }
-  .groupHead {
-    padding-top: 0.35rem;
   }
 }

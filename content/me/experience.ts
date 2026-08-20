@@ -9,24 +9,12 @@ export const experience: ExperienceRole[] = [
     ],
     period: "2024 — Present",
     location: "Pune, India",
-    summary:
-      "Leading solution architecture and legacy modernization for large enterprise platforms, and turning modern AI tooling into a real engineering advantage.",
+    summary: "Solution architecture & legacy modernization for enterprise platforms.",
     highlights: [
-      "Reverse-engineered 25+ COBOL Pathway systems, transforming complex legacy internals into scalable modernization and engineering strategies.",
-      "Led solution architecture across COBOL, Java, microservices, AWS, APIs, and enterprise messaging, with clear migration and integration boundaries.",
-      "Designed a closed-loop engineering solution combining OpenCode AI, contextual learning, and automated validation for COBOL-to-Java modernization.",
-      "Delivered enterprise integration using MuleSoft, AWS, IBM MQ, Terraform, and modern DevOps practices.",
+      "Reverse-engineered 250+ COBOL Pathway systems into modernization strategy.",
+      "Designed a closed-loop AI + validation pipeline for COBOL → Java.",
     ],
-    stack: [
-      "Solution Architecture",
-      "COBOL → Java",
-      "Microservices",
-      "AWS",
-      "MuleSoft",
-      "IBM MQ",
-      "Terraform",
-      "AI-native Dev",
-    ],
+    stack: ["Solution Architecture", "COBOL → Java", "Microservices", "AWS", "MuleSoft", "IBM MQ", "Terraform"],
   },
   {
     company: "Artios Media Consulting",
@@ -34,12 +22,10 @@ export const experience: ExperienceRole[] = [
     period: "2024",
     location: "Hyderabad, India",
     type: "Consulting",
-    summary:
-      "Architected and delivered a portfolio of cybersecurity, threat-intelligence and compliance products for multiple clients.",
+    summary: "Cybersecurity, threat-intel & compliance products for multiple clients.",
     highlights: [
-      "Architected and delivered BreachX, PrivilegeZero, CTEM, and Malware Bucket — cybersecurity and threat-intelligence platforms.",
-      "Built Credibl and EthixFirst, with scalable workflows for certificate generation, verification, workplace ethics, and compliance.",
-      "Engineered full-stack and mobile solutions using React, React Native, Node.js, cloud services, and large-scale bulk operations.",
+      "Architected BreachX, PrivilegeZero, CTEM & Malware Bucket.",
+      "Built Credibl and EthixFirst — bulk credentialing and workplace ethics.",
     ],
     stack: ["React", "React Native", "Node.js", "MongoDB", "AWS", "Threat Intel"],
   },
@@ -48,14 +34,12 @@ export const experience: ExperienceRole[] = [
     positions: [{ title: "Engineer", period: "Sep 2023 — Mar 2024" }],
     period: "2023 — 2024",
     location: "Bengaluru, India",
-    summary:
-      "Built scalable backend services and responsive front-ends for enterprise clients, with automated cloud delivery.",
+    summary: "Scalable backend & responsive front-ends for enterprise clients.",
     highlights: [
-      "Engineered scalable REST APIs and backend services using NestJS, TypeScript, and Prisma, focused on maintainability and performance.",
-      "Developed responsive React.js applications with MUI and integrated enterprise services including Twilio and Intelics.",
-      "Implemented AWS-based deployment and CI/CD automation, streamlining build, release, and production delivery.",
+      "REST services in NestJS · TypeScript · Prisma.",
+      "React apps + AWS CI/CD delivery.",
     ],
-    stack: ["NestJS", "TypeScript", "Prisma", "React.js", "MUI", "AWS", "CI/CD"],
+    stack: ["NestJS", "TypeScript", "Prisma", "React.js", "MUI", "AWS"],
   },
   {
     company: "Mutual Mobile",
@@ -65,14 +49,12 @@ export const experience: ExperienceRole[] = [
     ],
     period: "2021 — 2023",
     location: "Hyderabad, India",
-    summary:
-      "Full-stack delivery on transformative digital products for global brands and startups, across the full SDLC.",
+    summary: "Full-stack delivery on digital products for global brands.",
     highlights: [
-      "Implemented REST API integrations, asynchronous workflows, state management, and third-party integrations across enterprise applications.",
-      "Built APIs with NestJS, TypeScript, MongoDB, Jest and Swagger; crafted interfaces in React.js and MUI.",
-      "Contributed to debugging, code reviews, Agile delivery, and production support throughout the software lifecycle.",
+      "APIs in NestJS · TypeScript · MongoDB with Jest & Swagger.",
+      "React interfaces + Agile delivery across the SDLC.",
     ],
-    stack: ["NestJS", "TypeScript", "MongoDB", "React.js", "Jest", "Swagger", "AWS"],
+    stack: ["NestJS", "TypeScript", "MongoDB", "React.js", "Jest", "AWS"],
   },
   {
     company: "Adorway",
@@ -80,12 +62,10 @@ export const experience: ExperienceRole[] = [
     period: "2020 — Present",
     location: "India",
     type: "Founder",
-    summary:
-      "Co-founded a product & services studio, owning technical architecture and delivery across HR tech, cyber-safety and consumer platforms.",
+    summary: "Product & services studio — architecture and delivery across HR tech, cyber-safety, and consumer platforms.",
     highlights: [
-      "Led technical architecture and delivery for Orkaiva HRM, designing scalable foundations for workforce management.",
-      "Architected CopConnect — cybercrime assistance through expert discovery, secure communication, and mobile workflows.",
-      "Built SLR Astro and diverse client platforms end to end, and scaled EthicalLearner, an EdTech platform, from the ground up.",
+      "Led architecture for Orkaiva HRM and CopConnect.",
+      "Scaled EthicalLearner from zero; shipped SLR Astro and client platforms.",
     ],
     stack: ["Node.js", "Express", "MongoDB", "React", "React Native", "Microservices"],
   },

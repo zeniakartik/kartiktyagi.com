@@ -1,6 +1,7 @@
 import { expertise, skills } from "@/content/me";
 import { Section } from "@/components/ui/Section";
 import { Icon } from "@/components/ui/Icon";
+import { TechIcon } from "@/components/ui/TechIcon";
 import styles from "./Expertise.module.css";
 
 export function Expertise() {
@@ -10,7 +11,6 @@ export function Expertise() {
       index="02"
       kicker="Expertise"
       title="What I do best."
-      lead="I work across the full arc — from the first architecture sketch to the system running in production, and the team that keeps it there."
     >
       <div className={styles.grid}>
         {expertise.map((d, i) => (
@@ -55,6 +55,7 @@ export function Expertise() {
               <ul className={styles.chips}>
                 {g.items.map((item) => (
                   <li key={item} className="pill">
+                    <TechIcon label={item} className="pill-icon"/>
                     {item}
                   </li>
                 ))}

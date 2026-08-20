@@ -1,5 +1,6 @@
 import { engineering } from "@/content/me";
 import { Section } from "@/components/ui/Section";
+import { TechIcon } from "@/components/ui/TechIcon";
 import styles from "./Engineering.module.css";
 
 export function Engineering() {
@@ -43,6 +44,7 @@ export function Engineering() {
             <ul className={styles.chips}>
               {g.items.map((item) => (
                 <li key={item} className="pill">
+                  <TechIcon label={item} className="pill-icon" />
                   {item}
                 </li>
               ))}

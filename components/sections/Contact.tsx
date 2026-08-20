@@ -23,9 +23,8 @@ export function Contact() {
       </h2>
 
       <p className={styles.lead} data-reveal>
-        Whether it&apos;s an architecture you&apos;re shaping, a hard
-        modernization problem, or a product still on the whiteboard — I&apos;d
-        genuinely like to hear about it.
+        An architecture you&apos;re shaping, a hard modernization, or a product
+        still on the whiteboard — I&apos;d like to hear about it.
       </p>
 
       <div className={styles.actions} data-reveal>
@@ -60,11 +59,6 @@ export function Contact() {
           </a>
         </div>
       </div>
-
-      <p className={styles.availability} data-reveal>
-        <Icon name="map-pin" size={15} />
-        {profile.location} · {profile.availability}
-      </p>
     </section>
   );
 }

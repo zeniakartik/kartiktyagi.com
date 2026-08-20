@@ -8,7 +8,6 @@ export function Projects() {
       index="04"
       kicker="Projects"
       title="Things I've built."
-      lead="Products, platforms, security tooling, open source and experiments. Different problems, one throughline: systems designed to last."
     >
       <ProjectsClient />
     </Section>

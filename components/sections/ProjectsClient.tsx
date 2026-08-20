@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { projects } from "@/content/me";
 import type { ProjectCategory } from "@/content/me/types";
 import { Icon } from "@/components/ui/Icon";
+import { TechIcon } from "@/components/ui/TechIcon";
 import styles from "./Projects.module.css";
 
 const FILTERS: Array<"All" | ProjectCategory> = [
@@ -67,7 +68,6 @@ export function ProjectsClient() {
 
             <h3 className={styles.name}>{p.name}</h3>
             <p className={styles.tagline}>{p.tagline}</p>
-            <p className={styles.desc}>{p.description}</p>
 
             {p.featured && p.highlights?.length ? (
               <ul className={styles.highlights}>
@@ -82,6 +82,7 @@ export function ProjectsClient() {
             <ul className={styles.stack}>
               {p.stack.map((s) => (
                 <li key={s} className={styles.chip}>
+                  <TechIcon label={s} size={12} className={styles.chipIcon} />
                   {s}
                 </li>
               ))}

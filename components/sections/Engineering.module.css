@@ -112,13 +112,4 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem 2.5rem;
   }
-
-  .toolGroup {
-    grid-template-columns: 11rem 1fr;
-    align-items: start;
-  }
-
-  .toolLabel {
-    padding-top: 0.4rem;
-  }
 }

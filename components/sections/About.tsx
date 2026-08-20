@@ -8,7 +8,7 @@ export function About() {
       id="about"
       index="01"
       kicker="About"
-      title="Engineer, architect, and perpetual builder."
+      title="Engineer, architect, builder."
     >
       <div className={styles.prose}>
         {profile.about.map((para, i) => (
