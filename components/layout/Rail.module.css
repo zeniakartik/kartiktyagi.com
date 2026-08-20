@@ -13,6 +13,12 @@
   display: none;
 }
 
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* ── Brand bar ─────────────────────────────────────────────────────────── */
 .bar {
   display: flex;
@@ -29,7 +35,7 @@
 }
 
 .name {
-  font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.85rem);
+  font-size: clamp(2rem, 1.5rem + 1.2vw, 2.9rem);
   font-weight: 650;
   letter-spacing: -0.02em;
   color: var(--text-strong);
@@ -155,6 +161,7 @@
 
 .socials {
   display: flex;
+  justify-content: space-between;
   gap: 0.55rem;
 }
 

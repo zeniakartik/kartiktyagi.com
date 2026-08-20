@@ -46,27 +46,16 @@ export function Rail() {
 
   return (
     <header className={styles.rail} data-open={open || undefined}>
+
+
       <div className={styles.bar}>
         <a href="#top" className={styles.brand} onClick={close}>
           <span className={styles.name}>{profile.name}</span>
           <span className={styles.role}>
-            {profile.roles[0]} · {profile.roles[1]}
+            {profile.roles[0]} · {profile.roles[1]} · {profile.roles[2]}
           </span>
         </a>
 
-        <div className={styles.barControls}>
-          <ThemeToggle />
-          <button
-            type="button"
-            className={styles.hamburger}
-            aria-expanded={open}
-            aria-controls="rail-panel"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-          >
-            <Icon name={open ? "close" : "menu"} size={22} />
-          </button>
-        </div>
       </div>
 
       <div className={styles.panel} id="rail-panel">
@@ -120,16 +109,32 @@ export function Rail() {
             ))}
           </ul>
 
-          <a
-            href={profile.resume.href}
-            className={styles.resume}
-            target="_blank"
-            rel="noreferrer"
-            onClick={close}
-          >
-            <Icon name="download" size={16} />
-            {profile.resume.label}
-          </a>
+          <div className={styles.topBar}>
+            <div>
+              <a
+                href={profile.resume.href}
+                className={styles.resume}
+                target="_blank"
+                rel="noreferrer"
+                onClick={close}
+              >
+                <Icon name="download" size={16} />
+                {profile.resume.label}
+              </a></div>
+            <div className={styles.barControls}>
+              <ThemeToggle />
+              <button
+                type="button"
+                className={styles.hamburger}
+                aria-expanded={open}
+                aria-controls="rail-panel"
+                aria-label={open ? "Close menu" : "Open menu"}
+                onClick={() => setOpen((v) => !v)}
+              >
+                <Icon name={open ? "close" : "menu"} size={22} />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>

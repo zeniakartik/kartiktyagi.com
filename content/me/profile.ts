@@ -4,14 +4,14 @@ export const profile: Profile = {
   name: "Kartik Tyagi",
   firstName: "Kartik",
   roles: [
-    "Technical Lead",
-    "Solution Architect",
-    "Full-Stack Engineer",
     "Co-Founder & CTO",
+    "Solution Architect",
+    "Technical Lead",
+    "Full-Stack Engineer",
     "AI-native Builder",
   ],
   headline: "I design systems, and lead the teams that build them.",
-  location: "Pune, India",
+  location: "India",
   availability: "Open to architecture & technical leadership conversations",
   railTagline: "Systems thinking, from whiteboard to production.",
   photo: {

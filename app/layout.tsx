@@ -73,7 +73,7 @@ const personLd = {
   name: profile.name,
   url: site.url,
   image: `${site.url}${profile.photo.src}`,
-  jobTitle: "Technical Lead & Solution Architect",
+  jobTitle: "Co-Founder & CTO | Solution Architect | Technical Lead",
   description: site.description,
   address: {
     "@type": "PostalAddress",

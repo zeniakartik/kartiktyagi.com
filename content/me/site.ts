@@ -3,7 +3,7 @@ import type { SiteConfig } from "./types";
 export const site: SiteConfig = {
   name: "Kartik Tyagi",
   url: "https://kartiktyagi.com",
-  title: "Kartik Tyagi — Technical Lead & Solution Architect",
+  title: "Kartik Tyagi — Co-Founder & CTO | Solution Architect | Technical Lead",
   description:
     "Kartik Tyagi is a Technical Lead and Solution Architect building scalable systems across product, enterprise modernization, cloud, cybersecurity and AI-native engineering.",
   locale: "en_US",
