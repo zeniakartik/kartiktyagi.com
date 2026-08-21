@@ -1,22 +1,45 @@
+/* ── Timeline list ─────────────────────────────────────────────────────── */
 .list {
+  position: relative;
   display: flex;
   flex-direction: column;
+  /* Reserve space on the left for the year label + spine. */
+  padding-left: 2rem;
+}
+
+/* Continuous vertical spine down the left edge (mobile position). */
+.list::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--line) 8%,
+    var(--line) 92%,
+    transparent
+  );
 }
 
 .item {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  padding-block: clamp(1.75rem, 3vw, 2.25rem);
-  border-top: 1px solid var(--line);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-block: clamp(1.5rem, 2.6vw, 2rem);
 }
 
 .item:first-child {
-  border-top: none;
-  padding-top: 0;
+  padding-top: 0.25rem;
+}
+.item:last-child {
+  padding-bottom: 0.25rem;
 }
 
-/* ── Period column ─────────────────────────────────────────────────────── */
+/* ── Period column: year sits next to the spine on the left ─────────────── */
 .period {
   display: inline-flex;
   align-items: center;
@@ -25,21 +48,33 @@
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   color: var(--faint);
-  padding-top: 0.15rem;
+  margin-bottom: 0.9rem;
 }
 
+/* Marker: sits on top of the spine (position derived from .list padding),
+   vertically aligned with the company name row inside the content. */
 .marker {
-  width: 8px;
-  height: 8px;
+  position: absolute;
+  left: -1.5rem;
+  top: calc(clamp(1.5rem, 2.6vw, 2rem) + 0.55rem);
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--surface);
-  box-shadow: var(--nu-inset-sm);
+  box-shadow: var(--nu-inset-sm), 0 0 0 3px var(--bg);
   flex-shrink: 0;
+  transition: background var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+}
+
+.item:first-child .marker {
+  top: calc(0.25rem + 0.55rem);
 }
 
 .item:hover .marker {
   background: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-tint);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px var(--accent-tint);
 }
 
 /* ── Content ───────────────────────────────────────────────────────────── */
@@ -170,10 +205,36 @@
   gap: 0.8rem;
 }
 
-/* ── Desktop: period as a left column ──────────────────────────────────── */
+/* ── Desktop: year in a dedicated left column, marker on the spine ─────── */
 @media (min-width: 680px) {
+  .list {
+    /* Year column (right-aligned) + gutter + spine + content */
+    padding-left: 8.5rem;
+  }
+  .list::before {
+    left: 7rem; /* spine position — matches marker column */
+  }
+
   .item {
-    grid-template-columns: 8.5rem 1fr;
-    gap: 1.75rem;
+    /* Anchor absolute-positioned .period against each item. */
+  }
+
+  /* Year label sits in its own column to the LEFT of the spine, right-aligned. */
+  .period {
+    position: absolute;
+    top: calc(clamp(1.5rem, 2.6vw, 2rem) + 0.2rem);
+    left: -8.5rem;
+    width: 6rem;
+    margin: 0;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: 550;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  .item:first-child .period {
+    top: calc(0.25rem + 0.2rem);
   }
 }

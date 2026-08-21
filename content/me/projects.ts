@@ -43,6 +43,7 @@ export const projects: Project[] = [
     role: "Full-Stack Engineer",
     timeframe: "Artios · 2024",
     status: "Product",
+    featured: true,
     stack: ["React", "Node.js", "Workflow"],
   },
   {
@@ -61,7 +62,7 @@ export const projects: Project[] = [
   // ── Professional / Enterprise ────────────────────────────────────────────
   {
     slug: "cobol2java",
-    name: "cobol2java",
+    name: "Cobol to Java",
     category: "Professional",
     icon: "transform",
     tagline: "Modernization intelligence for legacy systems.",
@@ -147,7 +148,6 @@ export const projects: Project[] = [
     role: "Author & Maintainer",
     timeframe: "Open source",
     status: "NPM",
-    featured: true,
     stack: ["React", "TypeScript", "NPM"],
   },
 

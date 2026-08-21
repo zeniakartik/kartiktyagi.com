@@ -1,4 +1,4 @@
-import { experience, profile } from "@/content/me";
+import { experience } from "@/content/me";
 import { Section } from "@/components/ui/Section";
 import { Icon } from "@/components/ui/Icon";
 import { TechIcon } from "@/components/ui/TechIcon";
@@ -20,10 +20,8 @@ export function Experience() {
             data-reveal
             style={{ "--reveal-delay": `${(i % 3) * 60}ms` } as React.CSSProperties}
           >
-            <div className={styles.period}>
-              <span className={styles.marker} aria-hidden />
-              {role.period}
-            </div>
+            <span className={styles.marker} aria-hidden />
+            <div className={styles.period}>{role.period}</div>
 
             <div className={styles.content}>
               <div className={styles.head}>
@@ -79,17 +77,6 @@ export function Experience() {
           </li>
         ))}
       </ol>
-
-      <a
-        href={profile.resume.href}
-        className={styles.resumeLink}
-        target="_blank"
-        rel="noreferrer"
-        data-reveal
-      >
-        View full résumé
-        <Icon name="arrow-up-right" size={16} />
-      </a>
     </Section>
   );
 }

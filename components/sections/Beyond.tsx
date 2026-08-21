@@ -32,31 +32,53 @@ export function Beyond() {
 
       <div className={styles.extra}>
         <div className={styles.block} data-reveal>
-          <p className={styles.subhead}>Recognition</p>
+          <header className={styles.blockHead}>
+            <span className={styles.blockIcon}>
+              <Icon name="sparkles" size={18} />
+            </span>
+            <div>
+              <p className={styles.subhead}>Recognition</p>
+              <p className={styles.blockLead}>
+                A few things I&apos;m proud of.
+              </p>
+            </div>
+          </header>
           <ul className={styles.achList}>
             {achievements.map((a) => (
               <li key={a.title} className={styles.ach}>
-                {a.href ? (
-                  <a
-                    href={a.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.achTitleLink}
-                  >
-                    {a.title}
-                    <Icon name="arrow-up-right" size={14} />
-                  </a>
-                ) : (
-                  <span className={styles.achTitle}>{a.title}</span>
-                )}
-                <span className={styles.achDetail}>{a.detail}</span>
+                <div className={styles.achBody}>
+                  {a.href ? (
+                    <a
+                      href={a.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.achTitleLink}
+                    >
+                      {a.title}
+                      <Icon name="arrow-up-right" size={14} />
+                    </a>
+                  ) : (
+                    <span className={styles.achTitle}>{a.title}</span>
+                  )}
+                  <span className={styles.achDetail}>{a.detail}</span>
+                </div>
               </li>
             ))}
           </ul>
         </div>
 
         <div className={styles.block} data-reveal>
-          <p className={styles.subhead}>Education</p>
+          <header className={styles.blockHead}>
+            <span className={styles.blockIcon}>
+              <Icon name="architecture" size={18} />
+            </span>
+            <div>
+              <p className={styles.subhead}>Education</p>
+              <p className={styles.blockLead}>
+                Where the foundations were laid.
+              </p>
+            </div>
+          </header>
           <ul className={styles.eduList}>
             {education.map((e) => (
               <li key={e.school} className={styles.edu}>

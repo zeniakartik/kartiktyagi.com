@@ -41,17 +41,55 @@
   color: var(--accent);
 }
 
-/* ── Grid ──────────────────────────────────────────────────────────────── */
+/* ── "All" layout: hero + 2-up rows ───────────────────────────────────── */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rowGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rowPair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .rowPair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── Filtered layout: plain grid ──────────────────────────────────────── */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ── Card base ─────────────────────────────────────────────────────────── */
 .card {
   display: flex;
   flex-direction: column;
-  padding: clamp(1.35rem, 2.5vw, 1.75rem);
+  padding: clamp(1.25rem, 2.2vw, 1.6rem);
   border-radius: var(--r-lg);
   background: var(--surface);
   box-shadow: var(--nu-sm);
@@ -59,15 +97,13 @@
     box-shadow var(--dur-2) var(--ease);
   animation: cardIn var(--dur-3) var(--ease-out) backwards;
   animation-delay: calc(var(--i, 0) * 45ms);
+  min-width: 0;
+  min-height: 15rem;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--nu-lg);
-}
-
-.card[data-featured] {
-  box-shadow: var(--nu-md);
 }
 
 @keyframes cardIn {
@@ -77,11 +113,54 @@
   }
 }
 
+/* ── Hero card (full-width, taller, richer) ────────────────────────────── */
+.card[data-hero] {
+  min-height: 18rem;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem);
+  background: linear-gradient(
+    135deg,
+    var(--surface) 0%,
+    var(--surface) 55%,
+    var(--accent-tint) 130%
+  );
+  box-shadow: var(--nu-md);
+  border-radius: var(--r-xl);
+}
+
+.card[data-hero]:hover {
+  box-shadow: var(--nu-lg);
+}
+
+.card[data-hero] .cardIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--r-lg);
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--nu-xs);
+}
+
+.card[data-hero] .name {
+  font-size: clamp(1.5rem, 1.15rem + 1.4vw, 2.15rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.card[data-hero] .tagline {
+  font-size: 1.05rem;
+  margin-bottom: 1.15rem;
+}
+
+.card[data-hero] .stack {
+  max-height: none;
+}
+
+/* ── Card innards ──────────────────────────────────────────────────────── */
 .cardTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
 }
 
 .cardIcon {
@@ -95,7 +174,7 @@
   color: var(--muted);
 }
 
-.card[data-featured] .cardIcon {
+.card[data-featured]:not([data-hero]) .cardIcon {
   background: var(--accent);
   color: var(--on-accent);
   box-shadow: var(--nu-xs);
@@ -114,10 +193,10 @@
 }
 
 .name {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   font-weight: 640;
   letter-spacing: -0.015em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .tagline {
@@ -125,27 +204,22 @@
   font-size: 0.92rem;
   font-weight: 500;
   margin-bottom: 0.75rem;
-}
-
-.desc {
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  margin-bottom: 1.1rem;
+  line-height: 1.35;
 }
 
 .highlights {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  margin-bottom: 1.1rem;
+  gap: 0.5rem;
+  margin-bottom: 1.15rem;
+  max-width: 60ch;
 }
 
 .highlight {
   position: relative;
-  padding-left: 1.3rem;
+  padding-left: 1.35rem;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
@@ -153,8 +227,8 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0.55em;
-  width: 0.55rem;
+  top: 0.6em;
+  width: 0.6rem;
   height: 2px;
   border-radius: 2px;
   background: var(--accent);
@@ -164,7 +238,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
 }
 
 .chip {
@@ -235,23 +309,4 @@
 .link:hover {
   color: var(--accent);
   transform: translateY(-2px);
-}
-
-/* ── Responsive: bento with full-width featured ────────────────────────── */
-@media (min-width: 720px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .card[data-featured] {
-    grid-column: 1 / -1;
-  }
-
-  .card[data-featured] .desc {
-    max-width: 52ch;
-  }
-
-  .card[data-featured] .highlights {
-    max-width: 60ch;
-  }
 }

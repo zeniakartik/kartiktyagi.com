@@ -17,6 +17,7 @@ export function Expertise() {
           <article
             key={d.title}
             className={styles.domain}
+            data-hero={d.title === "Solution & System Architecture" || undefined}
             data-reveal
             style={{ "--reveal-delay": `${(i % 3) * 70}ms` } as React.CSSProperties}
           >

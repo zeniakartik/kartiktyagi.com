@@ -1,4 +1,4 @@
-import { profile, socials } from "@/content/me";
+import { socials } from "@/content/me";
 import { Icon } from "@/components/ui/Icon";
 import styles from "./Contact.module.css";
 
@@ -48,15 +48,6 @@ export function Contact() {
               {s.label}
             </a>
           ))}
-          <a
-            href={profile.resume.href}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.ghost}
-          >
-            <Icon name="download" size={16} />
-            {profile.resume.label}
-          </a>
         </div>
       </div>
     </section>

@@ -110,17 +110,6 @@ export function Rail() {
           </ul>
 
           <div className={styles.topBar}>
-            <div>
-              <a
-                href={profile.resume.href}
-                className={styles.resume}
-                target="_blank"
-                rel="noreferrer"
-                onClick={close}
-              >
-                <Icon name="download" size={16} />
-                {profile.resume.label}
-              </a></div>
             <div className={styles.barControls}>
               <ThemeToggle />
               <button
